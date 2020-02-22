@@ -1,6 +1,8 @@
 name: epp_project
 channels:
   - defaults
+  - conda-forge
+  - opensourceeconomics
 
 dependencies:
   - ipykernel=5.1.3
@@ -10,6 +12,8 @@ dependencies:
   - python=3.7
   - python-graphviz=0.8
   - nb_conda_kernels=2.2.2
+  - numpy
+  - estimagic
 
   - pip:
     - click==7.0
@@ -26,5 +30,3 @@ dependencies:
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.3
     - sphinxcontrib-bibtex==1.0.0
-
-
