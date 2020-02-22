@@ -39,3 +39,45 @@ def trid(params):
     return ((params["value"] - 1) ** 2).sum() - (
         params["value"][1:] * params["value"][:-1].values
     ).sum()
+
+
+def rotated_hyper_ellipsoid(params):
+    """ Implement Rotated Hyper Ellipsoid function.
+
+    Function description: https://www.sfu.ca/~ssurjano/rothyp.html.
+
+    Args:
+        params (pandas.DataFrame): Must have the column "value" containing
+        input values for parameters. Accepts arbitrary numbers of input values.
+
+    Returns:
+        integer: Rotated Hyper Ellipsoid function output.
+
+    """
+    val = 0
+    for i in range(len(params["value"])):
+        val += (params["value"][: i + 1] ** 2).sum()
+
+    return val
+
+
+def rosenbrock(params):
+    """ Implement Rosenbrock function.
+
+    Function description: https://www.sfu.ca/~ssurjano/rosen.html.
+
+    Args:
+        params (pandas.DataFrame): Must have the column "value" containing
+        input values for parameters. Accepts arbitrary numbers of input values.
+
+    Returns:
+        integer: Rosenbrock function output.
+
+    """
+    val = 0
+    for i in range(0, len(params["value"]) - 1):
+        val_1 = 100 * (params["value"][i + 1] - params["value"][i] ** 2) ** 2
+        val_2 = (params["value"][i] - 1) ** 2
+        val += val_1 + val_2
+
+    return val
