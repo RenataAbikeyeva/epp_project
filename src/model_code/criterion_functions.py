@@ -4,7 +4,7 @@ import pandas as pd
 params = pd.DataFrame([1, 2, 3], columns=["value"])
 
 
-def sum_of_squares(params):
+def sum_of_squares_v1(params):
     """ Implement Sum of Squared Parameters function.
 
     Function description: https://www.sfu.ca/~ssurjano/sumsqu.html.
@@ -61,7 +61,7 @@ def rotated_hyper_ellipsoid(params):
     return val
 
 
-def rosenbrock(params):
+def rosenbrock_v1(params):
     """ Implement Rosenbrock function.
 
     Function description: https://www.sfu.ca/~ssurjano/rosen.html.
@@ -81,3 +81,21 @@ def rosenbrock(params):
         val += val_1 + val_2
 
     return val
+
+
+def rosenbrock_v2(params):
+    """ Implement Rosenbrock function.
+
+    Function description: https://www.sfu.ca/~ssurjano/rosen.html.
+
+    Args:
+        params (pandas.DataFrame): Must have the column "value" containing
+        input values for parameters. Accepts arbitrary numbers of input values.
+
+    Returns:
+        integer:  Rosenbrock function output.
+
+    """
+    r1 = ((params["value"][1:] - params["value"][:-1].values ** 2) ** 2).sum() * 100
+    r2 = ((params["value"][:-1] - 1) ** 2).sum()
+    return r1 + r2
