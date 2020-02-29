@@ -33,11 +33,27 @@ algorithms = [
     "nlopt_newuoa",
     "nlopt_newuoa_bound",
     "nlopt_neldermead",
-    "nlopt_sbplx" "nlopt_cobyla",
+    "nlopt_sbplx",
+    "nlopt_cobyla",
     "nlopt_bobyqa",
 ]
 
 criteria = [sum_of_squares_v1, trid, rotated_hyper_ellipsoid, rosenbrock_v2]
+
+start_params_constr = [
+    [1, 2, 3],
+    [1, 3, 2],
+    [0.5, 0.5, 3],
+    [1, 2, 3],
+    [2, 1, 3],
+    [2, 2, 2],
+    [2, 2, 3],
+    [1, 1, 1],
+    [1, 1, 1],
+    [2, 1, 3],
+]
+
+constr_without_bounds = [constraints[2], constraints[3], constraints[4], constraints[9]]
 
 # run the actual benchmark
 results = []
@@ -53,37 +69,18 @@ for alg in algorithms:
     else:
         algo_options = {}
 
-    for constr in constraints:
-        index = pd.Index(["x_1", "x_2", "x_3"], name="parameters")
-        start_params = pd.DataFrame(index=index)
-        start_params["value"] = ""
-        start_params["lower"] = -5
-        start_params["upper"] = 5
+    for constr, param in zip(constraints, start_params_constr):
+        if constr in constr_without_bounds:
+            index = pd.Index(["x_1", "x_2", "x_3"], name="parameters")
+            start_params = pd.DataFrame(index=index)
+            start_params["value"] = param
+        else:
+            index = pd.Index(["x_1", "x_2", "x_3"], name="parameters")
+            start_params = pd.DataFrame(index=index)
+            start_params["value"] = param
+            start_params["lower"] = -5
+            start_params["upper"] = 5
 
-        if constr == []:
-            start_params["value"] = [1, 2, 3]
-        if constr == constraints[1]:
-            start_params["value"] = [1, 3, 2]
-        if constr == constraints[2]:
-            start_params = pd.DataFrame(index=index)
-            start_params["value"] = [0.5, 0.5, 3]
-        if constr == constraints[3]:
-            start_params = pd.DataFrame(index=index)
-            start_params["value"] = [1, 2, 3]
-        if constr == constraints[4]:
-            start_params = pd.DataFrame(index=index)
-            start_params["value"] = [2, 1, 3]
-        if constr == constraints[5]:
-            start_params["value"] = [2, 2, 2]
-        if constr == constraints[6]:
-            start_params["value"] = [2, 2, 3]
-        if constr == constraints[7]:
-            start_params["value"] = [1, 1, 1]
-        if constr == constraints[8]:
-            start_params["value"] = [1, 1, 1]
-        if constr == constraints[9]:
-            start_params = pd.DataFrame(index=index)
-            start_params["value"] = [2, 1, 3]
         for crit in criteria:
             info, opt_params = minimize(
                 crit,
@@ -106,4 +103,5 @@ for alg in algorithms:
 
 df = pd.concat(results, sort=False)
 df.reset_index(inplace=True, drop=True)
+
 df.to_csv("11optimizers.csv", index=False)
