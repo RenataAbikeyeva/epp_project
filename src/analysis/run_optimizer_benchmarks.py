@@ -88,6 +88,7 @@ for alg in algorithms:
                 constraints=constr,
                 algorithm=alg,
                 algo_options=algo_options,
+                logging=False,
             )
 
             opt_params["algorithm"] = alg
