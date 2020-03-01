@@ -1,0 +1,121 @@
+constraint,criterion,parameters,algorithm,value
+[],sum_of_squares,x_1,scipy_L-BFGS-B,2.167587881788889e-07
+[],sum_of_squares,x_2,scipy_L-BFGS-B,-1.4245166983891766e-08
+[],sum_of_squares,x_3,scipy_L-BFGS-B,-1.808694475800317e-08
+[],trid,x_1,scipy_L-BFGS-B,2.9999996149850414
+[],trid,x_2,scipy_L-BFGS-B,3.9999990818639435
+[],trid,x_3,scipy_L-BFGS-B,2.999999326983381
+[],rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,-3.3360262035494095e-08
+[],rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,-8.606377474407736e-08
+[],rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,2.692309912184593e-07
+[],rosenbrock,x_1,scipy_L-BFGS-B,0.9999981975055812
+[],rosenbrock,x_2,scipy_L-BFGS-B,0.9999963949155982
+[],rosenbrock,x_3,scipy_L-BFGS-B,0.9999927882815826
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",sum_of_squares,x_1,scipy_L-BFGS-B,1.0
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",sum_of_squares,x_2,scipy_L-BFGS-B,-4.700122104451393e-09
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",sum_of_squares,x_3,scipy_L-BFGS-B,-7.685193690199627e-09
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",trid,x_1,scipy_L-BFGS-B,1.0
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",trid,x_2,scipy_L-BFGS-B,2.6666666370607195
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",trid,x_3,scipy_L-BFGS-B,2.3333333037273856
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,1.0
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,1.3952255340649033e-08
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,-1.273089230910407e-08
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",rosenbrock,x_1,scipy_L-BFGS-B,1.0
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",rosenbrock,x_2,scipy_L-BFGS-B,0.999999998277147
+"[[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]]",rosenbrock,x_3,scipy_L-BFGS-B,0.9999999409613103
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",sum_of_squares,x_1,scipy_L-BFGS-B,5.006958989425415e-09
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",sum_of_squares,x_2,scipy_L-BFGS-B,5.006958989425415e-09
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",sum_of_squares,x_3,scipy_L-BFGS-B,-2.9878575381659564e-09
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",trid,x_1,scipy_L-BFGS-B,3.3333330905860294
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",trid,x_2,scipy_L-BFGS-B,3.3333330905860294
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",trid,x_3,scipy_L-BFGS-B,2.6666662443849627
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,-5.25069621115648e-09
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,-5.25069621115648e-09
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,-3.3521710518513714e-08
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",rosenbrock,x_1,scipy_L-BFGS-B,0.9999999736776968
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",rosenbrock,x_2,scipy_L-BFGS-B,0.9999999736776968
+"[[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]]",rosenbrock,x_3,scipy_L-BFGS-B,0.9999999715847551
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",sum_of_squares,x_1,scipy_L-BFGS-B,0.6666636855764309
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",sum_of_squares,x_2,scipy_L-BFGS-B,0.33333631442356915
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",sum_of_squares,x_3,scipy_L-BFGS-B,-4.754267661818882e-09
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",trid,x_1,scipy_L-BFGS-B,0.2727270828125081
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",trid,x_2,scipy_L-BFGS-B,0.727272917187492
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",trid,x_3,scipy_L-BFGS-B,1.3636366044469508
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,0.39999999337234154
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,0.6000000066276585
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,-5.1562632919202085e-09
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",rosenbrock,x_1,scipy_L-BFGS-B,0.6175634284896089
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",rosenbrock,x_2,scipy_L-BFGS-B,0.382436571510391
+"[[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]]",rosenbrock,x_3,scipy_L-BFGS-B,0.14625766072493265
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",sum_of_squares,x_1,scipy_L-BFGS-B,-7.257667685142274e-09
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",sum_of_squares,x_2,scipy_L-BFGS-B,-4.3289772495188834e-08
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",sum_of_squares,x_3,scipy_L-BFGS-B,-2.745429377526507e-08
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",trid,x_1,scipy_L-BFGS-B,3.000000293603796
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",trid,x_2,scipy_L-BFGS-B,4.00000009535293
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",trid,x_3,scipy_L-BFGS-B,2.999999809862153
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,2.2425847190062762e-07
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,-1.3286367167012934e-06
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,1.8628388528511987e-06
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",rosenbrock,x_1,scipy_L-BFGS-B,0.9999994430480785
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",rosenbrock,x_2,scipy_L-BFGS-B,0.9999988821164734
+"[[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]]",rosenbrock,x_3,scipy_L-BFGS-B,0.999997765784284
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",sum_of_squares,x_1,scipy_L-BFGS-B,1.2510922731755018e-06
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",sum_of_squares,x_2,scipy_L-BFGS-B,-6.444142289231106e-07
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",sum_of_squares,x_3,scipy_L-BFGS-B,2.6916572812833744e-07
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",trid,x_1,scipy_L-BFGS-B,3.0000004116651215
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",trid,x_2,scipy_L-BFGS-B,4.000002767324816
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",trid,x_3,scipy_L-BFGS-B,3.0000017947734317
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,4.009891772074651e-08
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,1.2795130044479948e-07
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,-7.29295556692055e-08
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",rosenbrock,x_1,scipy_L-BFGS-B,0.9999995834897675
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",rosenbrock,x_2,scipy_L-BFGS-B,0.9999991894407474
+"[[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]]",rosenbrock,x_3,scipy_L-BFGS-B,0.999998371094146
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",sum_of_squares,x_1,scipy_L-BFGS-B,2.082994954299977e-08
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",sum_of_squares,x_2,scipy_L-BFGS-B,2.082994954299977e-08
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",sum_of_squares,x_3,scipy_L-BFGS-B,2.082994954299977e-08
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",trid,x_1,scipy_L-BFGS-B,3.000000190561901
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",trid,x_2,scipy_L-BFGS-B,3.000000190561901
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",trid,x_3,scipy_L-BFGS-B,3.000000190561901
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,2.082994954299977e-08
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,2.082994954299977e-08
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,2.082994954299977e-08
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",rosenbrock,x_1,scipy_L-BFGS-B,0.010208418881766096
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",rosenbrock,x_2,scipy_L-BFGS-B,0.010208418881766096
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]]",rosenbrock,x_3,scipy_L-BFGS-B,0.010208418881766096
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",sum_of_squares,x_1,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",sum_of_squares,x_2,scipy_L-BFGS-B,-5.120368488691217e-09
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",sum_of_squares,x_3,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",trid,x_1,scipy_L-BFGS-B,1.5000000008064163
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",trid,x_2,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",trid,x_3,scipy_L-BFGS-B,1.5000000008064163
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,-5.12050279919678e-09
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",rosenbrock,x_1,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",rosenbrock,x_2,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]]",rosenbrock,x_3,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",sum_of_squares,x_1,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",sum_of_squares,x_2,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",sum_of_squares,x_3,scipy_L-BFGS-B,-5.73278300529278e-09
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",trid,x_1,scipy_L-BFGS-B,2.3333346160387793
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",trid,x_2,scipy_L-BFGS-B,2.666669205048498
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",trid,x_3,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,0.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,-5.444107814635682e-09
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",rosenbrock,x_1,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",rosenbrock,x_2,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]]",rosenbrock,x_3,scipy_L-BFGS-B,1.0
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",sum_of_squares,x_1,scipy_L-BFGS-B,1.3333333657291226
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",sum_of_squares,x_2,scipy_L-BFGS-B,1.3333333171354387
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",sum_of_squares,x_3,scipy_L-BFGS-B,4.676136913326495e-07
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",trid,x_1,scipy_L-BFGS-B,1.1851851419315877
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",trid,x_2,scipy_L-BFGS-B,1.407407429034206
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",trid,x_3,scipy_L-BFGS-B,1.7037038275465415
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",rotated_hyper_ellipsoid,x_1,scipy_L-BFGS-B,0.571428330907477
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",rotated_hyper_ellipsoid,x_2,scipy_L-BFGS-B,1.7142858345462615
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",rotated_hyper_ellipsoid,x_3,scipy_L-BFGS-B,4.991954335308797e-07
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",rosenbrock,x_1,scipy_L-BFGS-B,1.1861616229912912
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",rosenbrock,x_2,scipy_L-BFGS-B,1.4069191885043544
+"[[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]]",rosenbrock,x_3,scipy_L-BFGS-B,1.9794215962536474
