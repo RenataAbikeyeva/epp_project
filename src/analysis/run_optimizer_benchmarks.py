@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from criterion_functions import rosenbrock_v2
 from criterion_functions import rotated_hyper_ellipsoid
@@ -24,7 +25,18 @@ constraints = [
     [{"loc": ["x_1", "x_2"], "type": "linear", "weights": [1, 2], "value": 4}],
 ]
 
+
 algorithms = [
+    "pygmo_de1220",
+    "pygmo_sade",
+    "pygmo_pso",
+    "pygmo_pso_gen",
+    "pygmo_bee_colony",
+    "pygmo_cmaes",
+    "pygmo_xnes",
+    "pygmo_ihs",
+    "pygmo_sea",
+    "pygmo_de",
     "scipy_SLSQP",
     "scipy_TNC",
     "scipy_L-BFGS-B",
@@ -55,7 +67,6 @@ start_params_constr = [
 
 constr_without_bounds = [constraints[2], constraints[3], constraints[4], constraints[9]]
 
-# run the actual benchmark
 results = []
 for alg in algorithms:
     origin, algo_name = alg.split("_", 1)
@@ -82,14 +93,20 @@ for alg in algorithms:
             start_params["upper"] = 5
 
         for crit in criteria:
-            info, opt_params = minimize(
-                crit,
-                start_params,
-                constraints=constr,
-                algorithm=alg,
-                algo_options=algo_options,
-                logging=False,
-            )
+            if origin == "pygmo" and constr in constr_without_bounds:
+                index = pd.Index(["x_1", "x_2", "x_3"], name="parameters")
+                opt_params = pd.DataFrame(index=index)
+                opt_params["value"] = np.NaN
+
+            else:
+                info, opt_params = minimize(
+                    crit,
+                    start_params,
+                    constraints=constr,
+                    algorithm=alg,
+                    algo_options=algo_options,
+                    logging=False,
+                )
 
             opt_params["algorithm"] = alg
             opt_params["constraints"] = str(constr)
@@ -105,4 +122,4 @@ for alg in algorithms:
 df = pd.concat(results, sort=False)
 df.reset_index(inplace=True, drop=True)
 
-df.to_csv("11optimizers.csv", index=False)
+df.to_csv("21_optimizers.csv", index=False)
