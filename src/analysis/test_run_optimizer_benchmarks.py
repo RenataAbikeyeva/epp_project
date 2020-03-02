@@ -26,6 +26,8 @@ def test_optimizer_simple(true_value, calculated_value):
 
 
 # Same test but with parametrization
+preci_df = pd.read_csv("precisions_21.csv")
+
 test_cases = list(
     product(
         esti_df["algorithm"].unique().tolist(),
@@ -54,4 +56,12 @@ def test_optimizer(algorithm, constraint, criterion, parameters):
         "value",
     ].iloc[0]
 
-    aae(true_value, calculated_value, decimal=2)
+    precision = preci_df.loc[
+        (preci_df["algorithm"] == algorithm)
+        & (preci_df["constraints"] == constraint)
+        & (preci_df["criterion"] == criterion)
+        & (preci_df["parameters"] == parameters),
+        "precision",
+    ].iloc[0]
+
+    aae(true_value, calculated_value, decimal=precision)
