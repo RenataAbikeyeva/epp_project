@@ -3,29 +3,9 @@ from itertools import product
 import pandas as pd
 import pytest
 from numpy.testing import assert_almost_equal as aae
-from numpy.testing import assert_array_almost_equal as aaae
 
 true_df = pd.read_csv("true_value_21_opt.csv")
 esti_df = pd.read_csv("21_optimizers.csv")
-
-# Test to compare columns
-@pytest.fixture
-def true_value():
-    true_value = true_df["value"]
-    return true_value
-
-
-@pytest.fixture
-def calculated_value():
-    calculated_value = esti_df["value"]
-    return calculated_value
-
-
-def test_optimizer_simple(true_value, calculated_value):
-    aaae(true_value, calculated_value, decimal=5)
-
-
-# Same test but with parametrization
 preci_df = pd.read_csv("precisions_21.csv")
 
 test_cases = list(
@@ -36,6 +16,37 @@ test_cases = list(
         esti_df["parameters"].unique().tolist(),
     )
 )
+
+list_of_constraints = esti_df["constraints"].unique().tolist()
+
+constr_without_bounds = [
+    list_of_constraints[2],
+    list_of_constraints[9],
+    list_of_constraints[3],
+    list_of_constraints[4],
+]
+
+constr_trid = [
+    list_of_constraints[3],
+    list_of_constraints[7],
+    list_of_constraints[8],
+]
+
+constr_rosen = [
+    list_of_constraints[2],
+    list_of_constraints[9],
+]
+
+for tuple in test_cases:
+    origin, algo_name = tuple[0].split("_", 1)
+    if (
+        ((origin == "pygmo") & (tuple[1] in constr_without_bounds))
+        or ((tuple[2] == "trid") & (tuple[1] in constr_trid))
+        or ((tuple[2] == "rosenbrock_v2") & (tuple[1] in constr_rosen))
+    ):
+        test_cases[test_cases.index(tuple)] = pytest.param(
+            tuple[0], tuple[1], tuple[2], tuple[3], marks=pytest.mark.xfail
+        )
 
 
 @pytest.mark.parametrize("algorithm, constraint, criterion, parameters", test_cases)
