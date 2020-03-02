@@ -1,3 +1,4 @@
+# import sys
 import numpy as np
 import pandas as pd
 from criterion_functions import rosenbrock_v2
@@ -68,6 +69,8 @@ start_params_constr = [
 constr_without_bounds = [constraints[2], constraints[3], constraints[4], constraints[9]]
 
 results = []
+# if __name__ = "__main__":
+#    alg = sys.argv[1]
 for alg in algorithms:
     origin, algo_name = alg.split("_", 1)
     if origin == "pygmo":

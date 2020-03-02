@@ -37,42 +37,29 @@ constr_rosen = [
     list_of_constraints[9],
 ]
 
-for tuple in test_cases:
-    origin, algo_name = tuple[0].split("_", 1)
+for case in test_cases:
+    algorithm, constraint, criterion, parameter = case
+    origin, algo_name = algorithm.split("_", 1)
     if (
-        ((origin == "pygmo") & (tuple[1] in constr_without_bounds))
-        or ((tuple[2] == "trid") & (tuple[1] in constr_trid))
-        or ((tuple[2] == "rosenbrock_v2") & (tuple[1] in constr_rosen))
+        ((origin == "pygmo") & (constraint in constr_without_bounds))
+        or ((criterion == "trid") & (constraint in constr_trid))
+        or ((criterion == "rosenbrock_v2") & (constraint in constr_rosen))
     ):
-        test_cases[test_cases.index(tuple)] = pytest.param(
-            tuple[0], tuple[1], tuple[2], tuple[3], marks=pytest.mark.xfail
+        test_cases[test_cases.index(case)] = pytest.param(
+            algorithm, constraint, criterion, parameter, marks=pytest.mark.xfail
         )
 
 
 @pytest.mark.parametrize("algorithm, constraint, criterion, parameters", test_cases)
 def test_optimizer(algorithm, constraint, criterion, parameters):
-    true_value = true_df.loc[
-        (true_df["algorithm"] == "true_result")
-        & (true_df["constraints"] == constraint)
-        & (true_df["criterion"] == criterion)
-        & (true_df["parameters"] == parameters),
-        "value",
-    ].iloc[0]
-
-    calculated_value = esti_df.loc[
-        (esti_df["algorithm"] == algorithm)
-        & (esti_df["constraints"] == constraint)
-        & (esti_df["criterion"] == criterion)
-        & (esti_df["parameters"] == parameters),
-        "value",
-    ].iloc[0]
-
-    precision = preci_df.loc[
-        (preci_df["algorithm"] == algorithm)
-        & (preci_df["constraints"] == constraint)
-        & (preci_df["criterion"] == criterion)
-        & (preci_df["parameters"] == parameters),
-        "precision",
-    ].iloc[0]
-
+    true_value = true_df.set_index(["constraints", "criterion", "parameters"])
+    true_value = true_value.loc[(constraint, criterion, parameters), "value"].iloc[0]
+    calculated_value = esti_df.set_index(
+        ["algorithm", "constraints", "criterion", "parameters"]
+    )
+    calculated_value = calculated_value.loc[
+        (algorithm, constraint, criterion, parameters), "value"
+    ]
+    precision = preci_df.set_index(["algorithm", "constraints", "criterion"])
+    precision = precision.loc[(algorithm, constraint, criterion), "precision"].iloc[0]
     aae(true_value, calculated_value, decimal=precision)
