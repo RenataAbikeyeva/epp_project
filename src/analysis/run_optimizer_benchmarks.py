@@ -1,4 +1,6 @@
 # import sys
+import json
+
 import numpy as np
 import pandas as pd
 from criterion_functions import rosenbrock
@@ -6,6 +8,15 @@ from criterion_functions import rotated_hyper_ellipsoid
 from criterion_functions import sum_of_squares
 from criterion_functions import trid
 from estimagic.optimization.optimize import minimize
+
+with open("constraints.json", "r") as read_file:
+    constraints = json.load(read_file)
+with open("algorithms.json", "r") as read_file:
+    algorithms = json.load(read_file)
+with open("start_params_constr.json", "r") as read_file:
+    start_params_constr = json.load(read_file)
+with open("constr_without_bounds.json", "r") as read_file:
+    constr_without_bounds = json.load(read_file)
 
 
 def algo_options(alg):
@@ -38,64 +49,8 @@ def set_up_start_params(constr, param):
     return start_params
 
 
-constraints = [
-    [],
-    [{"loc": "x_1", "type": "fixed", "value": 1}],
-    [{"loc": ["x_1", "x_2"], "type": "probability"}],
-    [{"loc": ["x_2", "x_3"], "type": "increasing"}],
-    [{"loc": ["x_1", "x_2"], "type": "decreasing"}],
-    [{"loc": ["x_1", "x_2", "x_3"], "type": "equality"}],
-    [{"locs": ["x_1", "x_2"], "type": "pairwise_equality"}],
-    [{"loc": ["x_1", "x_2", "x_3"], "type": "covariance"}],
-    [{"loc": ["x_1", "x_2", "x_3"], "type": "sdcorr"}],
-    [{"loc": ["x_1", "x_2"], "type": "linear", "weights": [1, 2], "value": 4}],
-]
-
-algorithms = [
-    "pygmo_de1220",
-    "pygmo_sade",
-    "pygmo_pso",
-    "pygmo_pso_gen",
-    "pygmo_bee_colony",
-    "pygmo_cmaes",
-    "pygmo_xnes",
-    "pygmo_ihs",
-    "pygmo_sea",
-    "pygmo_de",
-    "scipy_SLSQP",
-    "scipy_TNC",
-    "scipy_L-BFGS-B",
-    "nlopt_auglag_eq",
-    "nlopt_auglag",
-    "nlopt_newuoa",
-    "nlopt_newuoa_bound",
-    "nlopt_neldermead",
-    "nlopt_sbplx",
-    "nlopt_cobyla",
-    "nlopt_bobyqa",
-]
-
 criteria = [sum_of_squares, trid, rotated_hyper_ellipsoid, rosenbrock]
 
-start_params_constr = [
-    [1, 2, 3],
-    [1, 3, 2],
-    [0.5, 0.5, 3],
-    [1, 2, 3],
-    [2, 1, 3],
-    [2, 2, 2],
-    [2, 2, 3],
-    [1, 1, 1],
-    [1, 1, 1],
-    [2, 1, 3],
-]
-
-constr_without_bounds = [
-    [{"loc": ["x_1", "x_2"], "type": "probability"}],
-    [{"loc": ["x_2", "x_3"], "type": "increasing"}],
-    [{"loc": ["x_1", "x_2"], "type": "decreasing"}],
-    [{"loc": ["x_1", "x_2"], "type": "linear", "weights": [1, 2], "value": 4}],
-]
 results = []
 # if __name__ = "__main__":
 #    alg = sys.argv[1]

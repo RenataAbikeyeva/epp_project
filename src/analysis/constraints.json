@@ -1,0 +1,90 @@
+[
+  [],
+  [
+    {
+      "loc": "x_1",
+      "type": "fixed",
+      "value": 1
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2"
+      ],
+      "type": "probability"
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_2",
+        "x_3"
+      ],
+      "type": "increasing"
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2"
+      ],
+      "type": "decreasing"
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2",
+        "x_3"
+      ],
+      "type": "equality"
+    }
+  ],
+  [
+    {
+      "locs": [
+        "x_1",
+        "x_2"
+      ],
+      "type": "pairwise_equality"
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2",
+        "x_3"
+      ],
+      "type": "covariance"
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2",
+        "x_3"
+      ],
+      "type": "sdcorr"
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2"
+      ],
+      "type": "linear",
+      "weights": [
+        1,
+        2
+      ],
+      "value": 4
+    }
+  ]
+]

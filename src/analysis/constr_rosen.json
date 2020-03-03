@@ -1,0 +1,25 @@
+[
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2"
+      ],
+      "type": "probability"
+    }
+  ],
+  [
+    {
+      "loc": [
+        "x_1",
+        "x_2"
+      ],
+      "type": "linear",
+      "weights": [
+        1,
+        2
+      ],
+      "value": 4
+    }
+  ]
+]

@@ -1,0 +1,23 @@
+[
+  "pygmo_de1220",
+  "pygmo_sade",
+  "pygmo_pso",
+  "pygmo_pso_gen",
+  "pygmo_bee_colony",
+  "pygmo_cmaes",
+  "pygmo_xnes",
+  "pygmo_ihs",
+  "pygmo_sea",
+  "pygmo_de",
+  "scipy_SLSQP",
+  "scipy_TNC",
+  "scipy_L-BFGS-B",
+  "nlopt_auglag_eq",
+  "nlopt_auglag",
+  "nlopt_newuoa",
+  "nlopt_newuoa_bound",
+  "nlopt_neldermead",
+  "nlopt_sbplx",
+  "nlopt_cobyla",
+  "nlopt_bobyqa"
+]
