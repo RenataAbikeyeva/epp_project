@@ -27,25 +27,6 @@ test_cases = list(
     )
 )
 
-# list_of_constraints = esti_df["constraints"].unique().tolist()
-
-# constr_without_bounds = [
-#    list_of_constraints[2],
-#    list_of_constraints[9],
-#    list_of_constraints[3],
-#    list_of_constraints[4],
-# ]
-
-# constr_trid = [
-#    list_of_constraints[4],
-#    list_of_constraints[7],
-#    list_of_constraints[8],
-# ]
-
-# constr_rosen = [
-#    list_of_constraints[2],
-#    list_of_constraints[9],
-# ]
 
 for case in test_cases:
     algorithm, constraint, criterion, parameter = case
@@ -53,7 +34,7 @@ for case in test_cases:
     if (
         ((origin == "pygmo") & (constraint in constr_without_bounds))
         or ((criterion == "trid") & (constraint in constr_trid))
-        or ((criterion == "rosenbrock_v2") & (constraint in constr_rosen))
+        or ((criterion == "rosenbrock") & (constraint in constr_rosen))
     ):
         test_cases[test_cases.index(case)] = pytest.param(
             algorithm, constraint, criterion, parameter, marks=pytest.mark.xfail
