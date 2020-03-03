@@ -44,13 +44,17 @@ for case in test_cases:
 @pytest.mark.parametrize("algorithm, constraint, criterion, parameters", test_cases)
 def test_optimizer(algorithm, constraint, criterion, parameters):
     true_value = true_df.set_index(["constraints", "criterion", "parameters"])
-    true_value = true_value.loc[(constraint, criterion, parameters), "value"].iloc[0]
+    true_value = true_value.loc[(constraint, criterion, parameters), "value"]
     calculated_value = esti_df.set_index(
         ["algorithm", "constraints", "criterion", "parameters"]
     )
     calculated_value = calculated_value.loc[
         (algorithm, constraint, criterion, parameters), "value"
     ]
-    precision = preci_df.set_index(["algorithm", "constraints", "criterion"])
-    precision = precision.loc[(algorithm, constraint, criterion), "precision"].iloc[0]
+    precision = preci_df.set_index(
+        ["algorithm", "constraints", "criterion", "parameters"]
+    )
+    precision = precision.loc[
+        (algorithm, constraint, criterion, parameters), "precision"
+    ]
     aae(true_value, calculated_value, decimal=precision)
