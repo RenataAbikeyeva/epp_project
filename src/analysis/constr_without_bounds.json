@@ -1,43 +1,6 @@
 [
-  [
-    {
-      "loc": [
-        "x_1",
-        "x_2"
-      ],
-      "type": "probability"
-    }
-  ],
-  [
-    {
-      "loc": [
-        "x_2",
-        "x_3"
-      ],
-      "type": "increasing"
-    }
-  ],
-  [
-    {
-      "loc": [
-        "x_1",
-        "x_2"
-      ],
-      "type": "decreasing"
-    }
-  ],
-  [
-    {
-      "loc": [
-        "x_1",
-        "x_2"
-      ],
-      "type": "linear",
-      "weights": [
-        1,
-        2
-      ],
-      "value": 4
-    }
-  ]
+  "[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",
+  "[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",
+  "[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",
+  "[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]"
 ]
