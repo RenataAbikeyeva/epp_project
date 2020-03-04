@@ -1,5 +1,5 @@
-# import sys
 import json
+import sys
 
 import numpy as np
 import pandas as pd
@@ -9,13 +9,15 @@ from criterion_functions import sum_of_squares
 from criterion_functions import trid
 from estimagic.optimization.optimize import minimize
 
-with open("constraints.json", "r") as read_file:
+from bld.project_paths import project_paths_join as ppj
+
+with open(ppj("IN_MODEL_CODE", "constraints.json"), "r") as read_file:
     constraints = json.load(read_file)
-with open("algorithms.json", "r") as read_file:
+with open(ppj("IN_MODEL_CODE", "algorithms.json"), "r") as read_file:
     algorithms = json.load(read_file)
-with open("start_params_constr.json", "r") as read_file:
+with open(ppj("IN_MODEL_CODE", "start_params_constr.json"), "r") as read_file:
     start_params_constr = json.load(read_file)
-with open("constr_without_bounds.json", "r") as read_file:
+with open(ppj("IN_MODEL_CODE", "constr_without_bounds.json"), "r") as read_file:
     constr_without_bounds = json.load(read_file)
 
 
@@ -51,10 +53,9 @@ def set_up_start_params(constr, param):
 
 criteria = [sum_of_squares, trid, rotated_hyper_ellipsoid, rosenbrock]
 
-results = []
-# if __name__ = "__main__":
-#    alg = sys.argv[1]
-for alg in algorithms:
+if __name__ == "__main__":
+    alg = sys.argv[1]
+    results = []
     algo_options = algo_options(alg)
     for constr, param in zip(constraints, start_params_constr):
         start_params = set_up_start_params(constr, param)

@@ -5,17 +5,19 @@ import pandas as pd
 import pytest
 from numpy.testing import assert_almost_equal as aae
 
+from bld.project_paths import project_paths_join as ppj
+
 true_df = pd.read_csv("true_df.csv")
 esti_df = pd.read_csv("calculated_21_df.csv")
 preci_df = pd.read_csv("precisions_21_df.csv")
 
-with open("constraints.json", "r") as read_file:
+with open(ppj("IN_MODEL_CODE", "constraints.json"), "r") as read_file:
     constraints = json.load(read_file)
-with open("constr_without_bounds.json", "r") as read_file:
+with open(ppj("IN_MODEL_CODE", "constr_without_bounds.json"), "r") as read_file:
     constr_without_bounds = json.load(read_file)
-with open("constr_trid.json", "r") as read_file:
+with open(ppj("IN_MODEL_CODE", "constr_trid.json"), "r") as read_file:
     constr_trid = json.load(read_file)
-with open("constr_rosen.json", "r") as read_file:
+with open(ppj("IN_MODEL_CODE", "constr_rosen.json"), "r") as read_file:
     constr_rosen = json.load(read_file)
 
 test_cases = list(
