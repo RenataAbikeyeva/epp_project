@@ -7,9 +7,9 @@ from numpy.testing import assert_almost_equal as aae
 
 from bld.project_paths import project_paths_join as ppj
 
-true_df = pd.read_csv("true_df.csv")
-esti_df = pd.read_csv("calculated_21_df.csv")
-preci_df = pd.read_csv("precisions_21_df.csv")
+true_df = pd.read_csv(ppj("IN_ANALYSIS", "true_df.csv"))
+esti_df = pd.read_csv(ppj("IN_ANALYSIS", "calculated_21_df.csv"))
+preci_df = pd.read_csv(ppj("IN_ANALYSIS", "precisions_21_df.csv"))
 
 with open(ppj("IN_MODEL_CODE", "constraints.json"), "r") as read_file:
     constraints = json.load(read_file)

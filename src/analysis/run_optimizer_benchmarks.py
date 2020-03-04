@@ -3,21 +3,26 @@ import sys
 
 import numpy as np
 import pandas as pd
-from criterion_functions import rosenbrock
-from criterion_functions import rotated_hyper_ellipsoid
-from criterion_functions import sum_of_squares
-from criterion_functions import trid
 from estimagic.optimization.optimize import minimize
 
 from bld.project_paths import project_paths_join as ppj
+from src.model_code.criterion_functions import rosenbrock
+from src.model_code.criterion_functions import rotated_hyper_ellipsoid
+from src.model_code.criterion_functions import sum_of_squares
+from src.model_code.criterion_functions import trid
 
-with open(ppj("IN_MODEL_CODE", "constraints.json"), "r") as read_file:
+# from criterion_functions import rosenbrock
+# from criterion_functions import rotated_hyper_ellipsoid
+# from criterion_functions import sum_of_squares
+# from criterion_functions import trid
+
+with open(ppj("IN_MODEL_SPECS", "constraints.json"), "r") as read_file:
     constraints = json.load(read_file)
-with open(ppj("IN_MODEL_CODE", "algorithms.json"), "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "algorithms.json"), "r") as read_file:
     algorithms = json.load(read_file)
-with open(ppj("IN_MODEL_CODE", "start_params_constr.json"), "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "start_params_constr.json"), "r") as read_file:
     start_params_constr = json.load(read_file)
-with open(ppj("IN_MODEL_CODE", "constr_without_bounds.json"), "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "constr_without_bounds.json"), "r") as read_file:
     constr_without_bounds = json.load(read_file)
 
 
@@ -61,7 +66,7 @@ if __name__ == "__main__":
         start_params = set_up_start_params(constr, param)
         for crit in criteria:
             origin, algo_name = alg.split("_", 1)
-            if origin == "pygmo" and constr in constr_without_bounds:
+            if (origin == "pygmo") and (constr in constr_without_bounds):
                 index = pd.Index(["x_1", "x_2", "x_3"], name="parameters")
                 opt_params = pd.DataFrame(index=index)
                 opt_params["value"] = np.NaN
@@ -89,4 +94,4 @@ if __name__ == "__main__":
 df = pd.concat(results, sort=False)
 df.reset_index(inplace=True, drop=True)
 
-df.to_csv("calculated_21_df.csv", index=False)
+df.to_csv(ppj("OUT_ANALYSIS", "calculated_21_df.csv"), index=False)

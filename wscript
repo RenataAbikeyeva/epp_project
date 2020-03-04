@@ -12,6 +12,7 @@ def set_project_paths(ctx):
 
     pp = OrderedDict()
     pp["PROJECT_ROOT"] = "."
+    pp["IN_ANALYSIS"] = "src/analysis"
     pp["IN_MODEL_CODE"] = "src/model_code"
     pp["IN_MODEL_SPECS"] = "src/model_specs"
     pp["BLD"] = ""

@@ -1,4 +1,5 @@
 #! python
+import os
 
 algorithms = [
     "pygmo_de1220",
@@ -42,3 +43,16 @@ def build(ctx):
             target=[ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_21_df.csv")],
             append=alg,
         )
+
+    abspath = os.path.join(ctx.path.abspath(), "test_run_optimizer_benchmarks.py")
+    ctx(
+        features="run_py_script",
+        source="test_run_optimizer_benchmarks.py",
+        deps=[
+            ctx.path_to(ctx, "IN_ANALYSIS", "run_optimizer_benchmarks.py"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "true_df.csv"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "calculated_21_df.csv"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "precisions_21_df.csv"),
+        ],
+        append=abspath,
+    )
