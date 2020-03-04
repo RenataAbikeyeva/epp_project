@@ -53,6 +53,10 @@ def build(ctx):
             ctx.path_to(ctx, "IN_ANALYSIS", "true_df.csv"),
             ctx.path_to(ctx, "IN_ANALYSIS", "calculated_21_df.csv"),
             ctx.path_to(ctx, "IN_ANALYSIS", "precisions_21_df.csv"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constraints.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_without_bounds_test.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_trid.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_rosen.json"),
         ],
         append=abspath,
     )

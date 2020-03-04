@@ -11,13 +11,13 @@ true_df = pd.read_csv(ppj("IN_ANALYSIS", "true_df.csv"))
 esti_df = pd.read_csv(ppj("IN_ANALYSIS", "calculated_21_df.csv"))
 preci_df = pd.read_csv(ppj("IN_ANALYSIS", "precisions_21_df.csv"))
 
-with open(ppj("IN_MODEL_CODE", "constraints.json"), "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "constraints.json"), "r") as read_file:
     constraints = json.load(read_file)
-with open(ppj("IN_MODEL_CODE", "constr_without_bounds.json"), "r") as read_file:
-    constr_without_bounds = json.load(read_file)
-with open(ppj("IN_MODEL_CODE", "constr_trid.json"), "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "constr_without_bounds_test.json"), "r") as read_file:
+    constr_without_bounds_test = json.load(read_file)
+with open(ppj("IN_MODEL_SPECS", "constr_trid.json"), "r") as read_file:
     constr_trid = json.load(read_file)
-with open(ppj("IN_MODEL_CODE", "constr_rosen.json"), "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "constr_rosen.json"), "r") as read_file:
     constr_rosen = json.load(read_file)
 
 test_cases = list(
@@ -34,7 +34,7 @@ for case in test_cases:
     algorithm, constraint, criterion, parameter = case
     origin, algo_name = algorithm.split("_", 1)
     if (
-        ((origin == "pygmo") & (constraint in constr_without_bounds))
+        ((origin == "pygmo") & (constraint in constr_without_bounds_test))
         or ((criterion == "trid") & (constraint in constr_trid))
         or ((criterion == "rosenbrock") & (constraint in constr_rosen))
     ):
