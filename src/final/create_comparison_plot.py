@@ -1,7 +1,14 @@
+# ===========================================================
+# Remove this when calling the script from waf
+import sys
+from pathlib import Path
+p = Path(__file__).resolve().parent.parent.parent
+sys.path.append(f"{p}/")
+# ===========================================================
 from src.comparison_plot.interactive_distribution_plot import interactive_distribution_plot
 import pandas as pd
 import numpy as np
-from bokeh.io import output_file
+from bokeh.io import save
 from bokeh.document import Document
 
 if __name__ == "__main__":
@@ -18,10 +25,10 @@ if __name__ == "__main__":
     doc = Document()
     source, plots, grid = interactive_distribution_plot(
         doc=doc,
-        source=data,
+        source=small_data,
         group_cols=["criterion", "constraints", "parameters"],
         reference_id="true_solution",
         clip=False
     )
 
-    output_file("comparison_plots.html")
+    save(grid, "comparison_plots.html", title="Benchmark Plot")
