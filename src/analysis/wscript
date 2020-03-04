@@ -1,23 +1,62 @@
 #! python
+import os
+
+algorithms = [
+    "pygmo_de1220",
+    "pygmo_sade",
+    "pygmo_pso",
+    "pygmo_pso_gen",
+    "pygmo_bee_colony",
+    "pygmo_cmaes",
+    "pygmo_xnes",
+    "pygmo_ihs",
+    "pygmo_sea",
+    "pygmo_de",
+    "scipy_SLSQP",
+    "scipy_TNC",
+    "scipy_L-BFGS-B",
+    "nlopt_auglag_eq",
+    "nlopt_auglag",
+    "nlopt_newuoa",
+    "nlopt_newuoa_bound",
+    "nlopt_neldermead",
+    "nlopt_sbplx",
+    "nlopt_cobyla",
+    "nlopt_bobyqa",
+]
 
 
 def build(ctx):
 
-    for model in "baseline", "max_moves_2":
+    for alg in algorithms:
 
-        # Illustrate use of run_py_script with automatic model specification.
         ctx(
             features="run_py_script",
-            source="schelling.py",
+            source="run_optimizer_benchmarks.py",
             deps=[
-                ctx.path_to(ctx, "OUT_DATA", "initial_locations.csv"),
-                ctx.path_to(ctx, "IN_MODEL_CODE", "agent.py"),
-                ctx.path_to(ctx, "IN_MODEL_SPECS", f"{model}.json"),
+                ctx.path_to(ctx, "IN_MODEL_CODE", "criterion_functions.py"),
+                ctx.path_to(ctx, "IN_MODEL_SPECS", "constraints.json"),
+                ctx.path_to(ctx, "IN_MODEL_SPECS", "algorithms.json"),
+                ctx.path_to(ctx, "IN_MODEL_SPECS", "start_params_constr.json"),
+                ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_without_bounds.json"),
             ],
-            target=[
-                ctx.path_to(ctx, "OUT_ANALYSIS", f"schelling_{model}.pickle"),
-                ctx.path_to(ctx, "OUT_ANALYSIS", "log", f"schelling_{model}.log"),
-            ],
-            append=model,
-            name=f"schelling_{model}",
+            target=[ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_21_df.csv")],
+            append=alg,
         )
+
+    abspath = os.path.join(ctx.path.abspath(), "test_run_optimizer_benchmarks.py")
+    ctx(
+        features="run_py_script",
+        source="test_run_optimizer_benchmarks.py",
+        deps=[
+            ctx.path_to(ctx, "IN_ANALYSIS", "run_optimizer_benchmarks.py"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "true_df.csv"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "calculated_21_df.csv"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "precisions_21_df.csv"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constraints.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_without_bounds_test.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_trid.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_rosen.json"),
+        ],
+        append=abspath,
+    )

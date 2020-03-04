@@ -1,21 +1,28 @@
-# import sys
 import json
+import sys
 
 import numpy as np
 import pandas as pd
-from criterion_functions import rosenbrock
-from criterion_functions import rotated_hyper_ellipsoid
-from criterion_functions import sum_of_squares
-from criterion_functions import trid
 from estimagic.optimization.optimize import minimize
 
-with open("constraints.json", "r") as read_file:
+from bld.project_paths import project_paths_join as ppj
+from src.model_code.criterion_functions import rosenbrock
+from src.model_code.criterion_functions import rotated_hyper_ellipsoid
+from src.model_code.criterion_functions import sum_of_squares
+from src.model_code.criterion_functions import trid
+
+# from criterion_functions import rosenbrock
+# from criterion_functions import rotated_hyper_ellipsoid
+# from criterion_functions import sum_of_squares
+# from criterion_functions import trid
+
+with open(ppj("IN_MODEL_SPECS", "constraints.json"), "r") as read_file:
     constraints = json.load(read_file)
-with open("algorithms.json", "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "algorithms.json"), "r") as read_file:
     algorithms = json.load(read_file)
-with open("start_params_constr.json", "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "start_params_constr.json"), "r") as read_file:
     start_params_constr = json.load(read_file)
-with open("constr_without_bounds.json", "r") as read_file:
+with open(ppj("IN_MODEL_SPECS", "constr_without_bounds.json"), "r") as read_file:
     constr_without_bounds = json.load(read_file)
 
 
@@ -51,16 +58,15 @@ def set_up_start_params(constr, param):
 
 criteria = [sum_of_squares, trid, rotated_hyper_ellipsoid, rosenbrock]
 
-results = []
-# if __name__ = "__main__":
-#    alg = sys.argv[1]
-for alg in algorithms:
+if __name__ == "__main__":
+    alg = sys.argv[1]
+    results = []
     algo_options = algo_options(alg)
     for constr, param in zip(constraints, start_params_constr):
         start_params = set_up_start_params(constr, param)
         for crit in criteria:
             origin, algo_name = alg.split("_", 1)
-            if origin == "pygmo" and constr in constr_without_bounds:
+            if (origin == "pygmo") and (constr in constr_without_bounds):
                 index = pd.Index(["x_1", "x_2", "x_3"], name="parameters")
                 opt_params = pd.DataFrame(index=index)
                 opt_params["value"] = np.NaN
@@ -88,4 +94,4 @@ for alg in algorithms:
 df = pd.concat(results, sort=False)
 df.reset_index(inplace=True, drop=True)
 
-df.to_csv("calculated_21_df.csv", index=False)
+df.to_csv(ppj("OUT_ANALYSIS", "calculated_21_df.csv"), index=False)
