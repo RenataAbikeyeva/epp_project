@@ -11,11 +11,6 @@ from src.model_code.criterion_functions import rotated_hyper_ellipsoid
 from src.model_code.criterion_functions import sum_of_squares
 from src.model_code.criterion_functions import trid
 
-# from criterion_functions import rosenbrock
-# from criterion_functions import rotated_hyper_ellipsoid
-# from criterion_functions import sum_of_squares
-# from criterion_functions import trid
-
 with open(ppj("IN_MODEL_SPECS", "constraints.json"), "r") as read_file:
     constraints = json.load(read_file)
 with open(ppj("IN_MODEL_SPECS", "algorithms.json"), "r") as read_file:
