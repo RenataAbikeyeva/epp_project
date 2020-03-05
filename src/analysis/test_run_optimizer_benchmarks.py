@@ -12,10 +12,10 @@ true_df = pd.read_csv(ppj("IN_ANALYSIS", "true_df.csv"))
 esti_df = pd.read_csv(ppj("OUT_ANALYSIS", "21_calculated_df.csv"))
 preci_df = pd.read_csv(ppj("IN_ANALYSIS", "precisions_21_df.csv"))
 
-with open(ppj("IN_MODEL_SPECS", "algorithms.json"), "r") as read_file:
-    algorithms = json.load(read_file)
-with open(ppj("IN_MODEL_SPECS", "constraints.json"), "r") as read_file:
-    constraints = json.load(read_file)
+# with open(ppj("IN_MODEL_SPECS", "algorithms.json"), "r") as read_file:
+#    algorithms = json.load(read_file)
+# with open(ppj("IN_MODEL_SPECS", "constraints.json"), "r") as read_file:
+#    constraints = json.load(read_file)
 with open(ppj("IN_MODEL_SPECS", "constr_without_bounds_test.json"), "r") as read_file:
     constr_without_bounds_test = json.load(read_file)
 with open(ppj("IN_MODEL_SPECS", "constr_trid.json"), "r") as read_file:
