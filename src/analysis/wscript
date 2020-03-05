@@ -44,10 +44,9 @@ def build(ctx):
             append=alg,
         )
 
-    abspath = os.path.join(ctx.path.abspath(), "test_run_optimizer_benchmarks.py")
     ctx(
         features="run_py_script",
-        source="create_21_df.py",
+        source="concat_results.py",
         deps=[
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_de1220.csv"),
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_sade.csv"),
@@ -72,8 +71,8 @@ def build(ctx):
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_bobyqa.csv"),
         ],
         target=[ctx.path_to(ctx, "OUT_ANALYSIS", "21_calculated_df.csv")],
-        append=abspath,
     )
+    abspath = os.path.join(ctx.path.abspath(), "test_run_optimizer_benchmarks.py")
     ctx(
         features="run_py_script",
         source="test_run_optimizer_benchmarks.py",
