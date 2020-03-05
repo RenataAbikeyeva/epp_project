@@ -47,16 +47,8 @@ def build(ctx):
     abspath = os.path.join(ctx.path.abspath(), "test_run_optimizer_benchmarks.py")
     ctx(
         features="run_py_script",
-        source="test_run_optimizer_benchmarks.py",
+        source="create_21_df.py",
         deps=[
-            ctx.path_to(ctx, "IN_ANALYSIS", "run_optimizer_benchmarks.py"),
-            ctx.path_to(ctx, "IN_ANALYSIS", "true_df.csv"),
-            ctx.path_to(ctx, "IN_ANALYSIS", "calculated_21_df.csv"),
-            ctx.path_to(ctx, "IN_ANALYSIS", "precisions_21_df.csv"),
-            ctx.path_to(ctx, "IN_MODEL_SPECS", "constraints.json"),
-            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_without_bounds_test.json"),
-            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_trid.json"),
-            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_rosen.json"),
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_de1220.csv"),
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_sade.csv"),
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_pso.csv"),
@@ -79,6 +71,21 @@ def build(ctx):
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_cobyla.csv"),
             ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_bobyqa.csv"),
         ],
-        target=[ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_21_df.csv")],
+        target=[ctx.path_to(ctx, "OUT_ANALYSIS", "21_calculated_df.csv")],
+        append=abspath,
+    )
+    ctx(
+        features="run_py_script",
+        source="test_run_optimizer_benchmarks.py",
+        deps=[
+            ctx.path_to(ctx, "IN_ANALYSIS", "run_optimizer_benchmarks.py"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "true_df.csv"),
+            ctx.path_to(ctx, "OUT_ANALYSIS", "21_calculated_df.csv"),
+            ctx.path_to(ctx, "IN_ANALYSIS", "precisions_21_df.csv"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constraints.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_without_bounds_test.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_trid.json"),
+            ctx.path_to(ctx, "IN_MODEL_SPECS", "constr_rosen.json"),
+        ],
         append=abspath,
     )

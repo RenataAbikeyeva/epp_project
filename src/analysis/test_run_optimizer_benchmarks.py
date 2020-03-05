@@ -1,4 +1,3 @@
-import glob
 import json
 import sys
 from itertools import product
@@ -10,7 +9,7 @@ from numpy.testing import assert_almost_equal as aae
 from bld.project_paths import project_paths_join as ppj
 
 true_df = pd.read_csv(ppj("IN_ANALYSIS", "true_df.csv"))
-# esti_df = pd.read_csv(ppj("IN_ANALYSIS", "calculated_21_df.csv"))
+esti_df = pd.read_csv(ppj("OUT_ANALYSIS", "21_calculated_df.csv"))
 preci_df = pd.read_csv(ppj("IN_ANALYSIS", "precisions_21_df.csv"))
 
 with open(ppj("IN_MODEL_SPECS", "algorithms.json"), "r") as read_file:
@@ -24,17 +23,6 @@ with open(ppj("IN_MODEL_SPECS", "constr_trid.json"), "r") as read_file:
 with open(ppj("IN_MODEL_SPECS", "constr_rosen.json"), "r") as read_file:
     constr_rosen = json.load(read_file)
 
-path = ppj("OUT_ANALYSIS", "[c]*.csv")
-all_calculated_paths = glob.glob(path)
-
-esti_list = []
-for alg_calculated_path in all_calculated_paths:
-    calculated_alg_df = pd.read_csv(alg_calculated_path, index_col=None)
-    esti_list.append(calculated_alg_df)
-esti_df = pd.concat(esti_list, sort=False)
-esti_df.reset_index(inplace=True, drop=True)
-
-esti_df.to_csv(ppj("OUT_ANALYSIS", "21_calculated_df.csv"), index=False)
 
 test_cases = list(
     product(
