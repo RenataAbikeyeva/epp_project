@@ -58,9 +58,9 @@ def set_up_start_params(constr, param):
 
 criteria = [sum_of_squares, trid, rotated_hyper_ellipsoid, rosenbrock]
 
+results = []
 if __name__ == "__main__":
     alg = sys.argv[1]
-    results = []
     algo_options = algo_options(alg)
     for constr, param in zip(constraints, start_params_constr):
         start_params = set_up_start_params(constr, param)
@@ -91,7 +91,7 @@ if __name__ == "__main__":
 
             results.append(opt_params)
 
-df = pd.concat(results, sort=False)
-df.reset_index(inplace=True, drop=True)
+    df = pd.concat(results, sort=False)
+    df.reset_index(inplace=True, drop=True)
 
-df.to_csv(ppj("OUT_ANALYSIS", "calculated_21_df.csv"), index=False)
+df.to_csv(ppj("OUT_ANALYSIS", f"calculated_{alg}.csv"), index=False)
