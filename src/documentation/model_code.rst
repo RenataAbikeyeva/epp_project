@@ -4,15 +4,28 @@
 Model code
 **********
 
+The directory src.model_code contains definitions of four functions used for testing optimizers.
 
-The directory *src.model_code* contains source files that might differ by model and that are potentially used at various steps of the analysis.
+.. automodule:: src.model_code
+    :members:
+    :undoc-members:
+    :inherited-members:
+    :show-inheritance:
 
-For example, you may have a class that is used both in the :ref:`analysis` and the :ref:`final` steps. Additionally, maybe you have different utility functions in the baseline version and for your robustness check. You can just inherit from the baseline class and override the utility function then.
+.. automodule:: src.model_code.trid
+    :members:
+    :undoc-members:
+    :inherited-members:
+    :show-inheritance:
 
-
-The ``Agent`` class of the Schelling example
-============================================
-
-.. automodule:: src.model_code.agent
+.. automodule:: src.model_code.sum_squares
     :members:
 
+.. automodule:: src.model_code.trid
+    :members:
+
+.. automodule:: src.model_code.rotated_hyper_ellipsoid
+    :members:
+
+.. automodule:: src.model_code.rosenbrock
+    :members:
