@@ -1,3 +1,6 @@
+""" Download data frames with optimized parameter values for each algorithms,
+concatenate into one data frame and save in "OUT_ANALYSIS".
+"""
 import glob
 
 import pandas as pd
