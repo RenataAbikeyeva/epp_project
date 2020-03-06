@@ -154,10 +154,10 @@ for case in test_cases:
         & (criterion == "rosenbrock")
         & (
             (constraint == "[]")
+            or (constraint == "[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]")
             or (
-                constraint
-                == "[{'locs': ['x_1', 'x_2'], \
-            'type': 'pairwise_equality'}]"
+                (constraint == "[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]")
+                & ((parameter == "x_2") or (parameter == "x_3"))
             )
         )
     ):
@@ -168,7 +168,7 @@ for case in test_cases:
             parameter,
             marks=pytest.mark.xfail(
                 reason="At precision=2, pygmo_bee_colony fails rosenbrock\
-                 in unconstrained and pairwise_equality constraint."
+                 in unconstrained, fixed and pairwise_equality constraints."
             ),
         )
     elif (
@@ -176,11 +176,7 @@ for case in test_cases:
         & (criterion == "rosenbrock")
         & (
             (constraint == "[]")
-            or (
-                constraint
-                == "[{'locs': ['x_1', 'x_2'], \
-            'type': 'pairwise_equality'}]"
-            )
+            or (constraint == "[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]")
         )
     ):
         test_cases[test_cases.index(case)] = pytest.param(
@@ -220,6 +216,20 @@ for case in test_cases:
                 reason="At precision=2, pygmo_pso_gen fails rosenbrock in unconstrained case."
             ),
         )
+    elif (
+        (algorithm == "pygmo_cmaes")
+        & (criterion == "rosenbrock")
+        & (constraint == "[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]")
+    ):
+        test_cases[test_cases.index(case)] = pytest.param(
+            algorithm,
+            constraint,
+            criterion,
+            parameter,
+            marks=pytest.mark.xfail(
+                reason="At precision=2, pygmo_cmaes fails rosenbrock with pairwise_equality."
+            ),
+        )
     elif (algorithm == "pygmo_sea") & (
         (
             (criterion == "rosenbrock")
@@ -227,7 +237,7 @@ for case in test_cases:
                 (constraint == "[]")
                 or (
                     (constraint == "[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]")
-                    & (parameter == "x_3")
+                    & ((parameter == "x_2") or (parameter == "x_3"))
                 )
                 or (
                     constraint
