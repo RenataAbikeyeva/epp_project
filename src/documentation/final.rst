@@ -1,15 +1,11 @@
 .. _final:
 
 ************************************
-Visualisation and results formatting
+Visualisation of optimization
 ************************************
 
-
-Documentation of the code in *src.final*.
-
-
-Schelling example
+Comparison plots
 =================
 
-.. automodule:: src.final.plot_locations
-    :members:
+.. raw:: html
+   :file: comparison_plots.html
