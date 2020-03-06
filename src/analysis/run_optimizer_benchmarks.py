@@ -9,9 +9,9 @@ import sys
 
 import numpy as np
 import pandas as pd
-from bld.project_paths import project_paths_join as ppj
 from estimagic.optimization.optimize import minimize
 
+from bld.project_paths import project_paths_join as ppj
 from src.model_code.criterion_functions import rosenbrock
 from src.model_code.criterion_functions import rotated_hyper_ellipsoid
 from src.model_code.criterion_functions import sum_of_squares
@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
             results.append(opt_params)
 
-    df = pd.concat(results, sort=False)
-    df.reset_index(inplace=True, drop=True)
+            df = pd.concat(results, sort=False)
+            df.reset_index(inplace=True, drop=True)
 
 df.to_csv(ppj("OUT_ANALYSIS", f"calculated_{alg}.csv"), index=False)
