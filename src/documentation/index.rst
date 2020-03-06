@@ -11,12 +11,8 @@ Welcome to the Tests for Optimizers in Estimagic project's documentation!
     :maxdepth: 2
 
     introduction
-    original_data
-    data_management
     analysis
     final
-    paper
     model_code
     model_specs
-    library
     references

@@ -1,11 +1,17 @@
+""" Given an algorithm, run optimization of each criterion function
+(defined in criterion_functions.py) with set of 10 constraints to find minima.
+Save results into a data frame (in "OUT_ANALYSIS") with information on algorithm,
+criterion, constraint, parameter and corresponding optimal parameter values.
+
+"""
 import json
 import sys
 
 import numpy as np
 import pandas as pd
+from bld.project_paths import project_paths_join as ppj
 from estimagic.optimization.optimize import minimize
 
-from bld.project_paths import project_paths_join as ppj
 from src.model_code.criterion_functions import rosenbrock
 from src.model_code.criterion_functions import rotated_hyper_ellipsoid
 from src.model_code.criterion_functions import sum_of_squares
@@ -22,6 +28,17 @@ with open(ppj("IN_MODEL_SPECS", "constr_without_bounds.json"), "r") as read_file
 
 
 def algo_options(alg):
+    """Create algo_options input for optimization fuction for the algorithm.
+
+    Args:
+        alg (string): algorithm
+        (created for algoritms considered for this project, contained in algorithms.json).
+
+    Returns:
+        algo_option (dictionary): algo_options input for optimization fuction.
+        Depending on the algorithm either an empty dictionary or
+        dictionary containing optional keyword arguments "popsize" and "gen".
+    """
     origin, algo_name = alg.split("_", 1)
     if origin == "pygmo":
         if algo_name in ["ihs"]:
@@ -37,6 +54,20 @@ def algo_options(alg):
 
 
 def set_up_start_params(constr, param):
+    """ Creates params input for optimization fuction for each algorithm.
+
+    Args:
+        constr (sting): constraints
+        (created for constraints considered for this project, contained in constraints.json).
+
+        param (list): list of start parameters.
+        (created for constraints considered for this project, contained in constraints.json).
+
+    Returns:
+        start_params (pandas.DataFrame): params input for optimization function.
+        Contains column "value" for start parameters and depending on a constraint
+        columns "lower" and "upper" referring to lower and upper bounds respectively.
+    """
     if constr in constr_without_bounds:
         index = pd.Index(["x_1", "x_2", "x_3"], name="parameters")
         start_params = pd.DataFrame(index=index)
