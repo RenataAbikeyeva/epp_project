@@ -10,12 +10,14 @@ Documentation of the code in *src.analysis*. This is the core of the project.
 Run Optimizer Benchmarks
 ============================
 
+
 .. automodule:: src.analysis.run_optimizer_benchmarks
     :members:
 
 
 Concatenate calculated optimal parameters
 =========================================
+
 
 .. automodule:: src.analysis.concat_results
     :members:
@@ -206,12 +208,12 @@ For each criterion, we consider the case of 3 dimensions (set D=3). Below you ca
 
    1. No constraints case: ``[]``
 
-        :math:`x* = (0, 0, 0), \quad f(x*) = 0`
+        :math:`x* = (0, 0, 0)`
 
 
    2. Fixed constraint: ``[{"loc": "x_1", "type": "fixed", "value": 1}]``
 
-       :math:`x_{1} = 1 \rightarrow x* = (1, 0, 0), \quad f({x*}) = 1`
+       :math:`x_{1} = 1 \rightarrow x* = (1, 0, 0)`
 
 
    3. Probability constraint: ``[{"loc": ["x_1", "x_2"], "type": "probability"}]``
@@ -221,32 +223,32 @@ For each criterion, we consider the case of 3 dimensions (set D=3). Below you ca
 
    4. Increasing constraint: ``[{"loc": ["x_2", "x_3"], "type": "increasing"}]``
 
-       Not binding :math:`\rightarrow x* = (0, 0, 0), f({x*}) = 0`
+       Not binding :math:`\rightarrow x* = (0, 0, 0)`
 
 
    5. Decreasing constraint: ``[{"loc": ["x_1", "x_2"], "type": "decreasing"}]``
 
-       Not binding :math:`\rightarrow x* = (0, 0, 0), f({x*}) = 0`
+       Not binding :math:`\rightarrow x* = (0, 0, 0)`
 
 
    6. Equality constraint: ``[{"loc": ["x_1", "x_2", "x_3"], "type": "equality"}]``
 
-       Not binding :math:`\rightarrow x* = (0, 0, 0), f({x*}) = 0`
+       Not binding :math:`\rightarrow x* = (0, 0, 0)`
 
 
    7. Pairwise equality constraint: ``[{"locs": ["x_1", "x_2"], "type": "pairwise_equality"}]``
 
-       Not binding :math:`\rightarrow x* = (0, 0, 0), f({x*}) = 0`
+       Not binding :math:`\rightarrow x* = (0, 0, 0)`
 
 
    8. Covariance constraint: ``[{"loc": ["x_1", "x_2", "x_3"], "type": "covariance"}]``
 
-       Not binding :math:`\rightarrow x* = (0, 0, 0), f({x*}) = 0`
+       Not binding :math:`\rightarrow x* = (0, 0, 0)`
 
 
    9. Sdcorr constraint: ``[{"loc": ["x_1", "x_2", "x_3"], "type": "sdcorr"}]``
 
-       Not binding :math:`\rightarrow x* = (0, 0, 0), f({x*}) = 0`
+       Not binding :math:`\rightarrow x* = (0, 0, 0)`
 
 
    10. Linear constraint:``[{"loc": ["x_1", "x_2"], "type": "linear", "weights": [1, 2], "value": 4}]``
@@ -266,6 +268,7 @@ Data frame precisions_21.py contains precision level values between 2 and 6 for 
 
 Test of Optimizers
 ===================
+
 
 .. automodule:: src.analysis.test_run_optimizer_benchmarks
     :members:
