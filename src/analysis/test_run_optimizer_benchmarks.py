@@ -53,8 +53,8 @@ for case in test_cases:
             criterion,
             parameter,
             marks=pytest.mark.xfail(
-                reason="In true_df, Trid (decreasing, covariance and\
-                 sdcorr constraints) set to NaN."
+                reason="True values for Trid function (decreasing, covariance \
+                and sdcorr constraints) currently unknown."
             ),
         )
     elif (criterion == "rosenbrock") & (constraint in constr_rosen):
@@ -64,8 +64,8 @@ for case in test_cases:
             criterion,
             parameter,
             marks=pytest.mark.xfail(
-                reason="In true_df, Rosenbrock (probability and linear \
-                constraints) set to NaN."
+                reason="True values for Rosenbrock function (probability and \
+                linear constraints) currently unknown."
             ),
         )
     elif (
@@ -155,10 +155,6 @@ for case in test_cases:
         & (
             (constraint == "[]")
             or (constraint == "[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]")
-            # or (
-            #     (constraint == "[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]")
-            #     & ((parameter == "x_2") or (parameter == "x_3"))
-            # )
         )
     ):
         test_cases[test_cases.index(case)] = pytest.param(
@@ -216,20 +212,7 @@ for case in test_cases:
                 reason="At precision=2, pygmo_pso_gen fails rosenbrock in unconstrained case."
             ),
         )
-    # elif (
-    #     (algorithm == "pygmo_cmaes")
-    #     & (criterion == "rosenbrock")
-    #     & (constraint == "[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]")
-    # ):
-    #     test_cases[test_cases.index(case)] = pytest.param(
-    #         algorithm,
-    #         constraint,
-    #         criterion,
-    #         parameter,
-    #         marks=pytest.mark.xfail(
-    #             reason="At precision=2, pygmo_cmaes fails rosenbrock with pairwise_equality."
-    #         ),
-    #     )
+
     elif (algorithm == "pygmo_sea") & (
         (
             (criterion == "rosenbrock")
@@ -245,21 +228,6 @@ for case in test_cases:
                 )
             )
         )
-        # or (
-        #     (criterion == "sum_of_squares")
-        #     & (
-        #         ((constraint == "[]") & (parameter == "x_1"))
-        #         or (
-        #             (constraint == "[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]")
-        #             & (parameter == "x_2")
-        #         )
-        #     )
-        # )
-        # or (
-        #     (criterion == "rotated_hyper_ellipsoid")
-        #     & (constraint == "[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]")
-        #     & (parameter == "x_1")
-        # )
         or (
             (criterion == "trid")
             & (constraint == "[]")
