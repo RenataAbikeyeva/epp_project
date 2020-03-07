@@ -1,3 +1,9 @@
+""" Using dataframe of true values and generated
+dataframe of calculated values, test each algorithm (at that algorithm's
+precision level) for a specific criterion function, constraint and parameter. Set xfail cases,
+specifying corresponding reason.
+
+"""
 import json
 import sys
 from itertools import product
@@ -164,7 +170,7 @@ for case in test_cases:
             parameter,
             marks=pytest.mark.xfail(
                 reason="At precision=2, pygmo_bee_colony fails rosenbrock\
-                 in unconstrained, fixed and pairwise_equality constraints."
+                 in unconstrained and pairwise_equality constraints."
             ),
         )
     elif (
@@ -242,8 +248,7 @@ for case in test_cases:
             marks=pytest.mark.xfail(
                 reason="At precision=2, pygmo_sea fails rosenbrock in\
                  unconstrained, fixed and pairwise_equality. Fails \
-                 sum_of_squares in unconstrained and sdcorr. Fails \
-                 rotated_hyper_ellipsoid with covariance constraint."
+                 trid in unconstrained case."
             ),
         )
     elif (
