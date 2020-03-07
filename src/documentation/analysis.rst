@@ -1,33 +1,33 @@
 .. _analysis:
 
-************************************
-Optimization. Testing of optimizers.
-************************************
+****************************************************************
+Optimization on Benchmark Functions. Tests for Algorithms.
+****************************************************************
 
 Documentation of the code in *src.analysis*. This is the core of the project.
 
 
 Run Optimizer Benchmarks
-============================
+================================
 
 
 .. automodule:: src.analysis.run_optimizer_benchmarks
     :members:
 
 
-Concatenate calculated optimal parameters
-=========================================
+Concatenate Calculated Optimal Parameters
+===========================================
 
 
 .. automodule:: src.analysis.concat_results
     :members:
 
 
-Data frame with true optimal parameters
+Dataframe with True Optimal Parameters
 =======================================
 
-Data frame true_df.csv contains true optimal values for parameters for each function and each constraint.
-For each criterion, we consider the case of 3 dimensions (set D=3). Below you can find the self-calculated solutions.
+The Dataframe true_df.csv contains true optimal values of parameters for each function and each constraint.
+For each criterion function, we consider the case of 3 dimensions (set D=3). Below you can find the self-calculated solutions.
 
 1. **Sum Squares Function**
 
@@ -308,15 +308,27 @@ For each criterion, we consider the case of 3 dimensions (set D=3). Below you ca
 
         No solution available.
 
-Data frame with precision levels
+Dataframe with Precision Levels
 =======================================
 
-Data frame precisions_21.py contains precision level values between 2 and 6 for each algorithm. They were set at the maximum level at which particular algorithm passes test. Those which do not pass even at the precision equal to 2 were set  to the precision level 2 (and set to xfail at test).
+The Dataframe precisions.csv lists the precision level corresponding to each algorithm.
+The precision has been set to the maximum level at which the algorithm in question
+passes all test cases. The minimum level is set to 2.
 
 
-Test of Optimizers
-===================
+
+Tests for Algorithms
+========================
 
 
 .. automodule:: src.analysis.test_run_optimizer_benchmarks
     :members:
+
+Each algorithm is tested for 4 criterion functions and 10 constraints.
+We set the number of dimensions for each criterion as 3, hence each
+algorithm faces a total of 120 test cases. Certain algorithms fail some test
+cases even at precision = 2, those cases have been xfailed. Further,
+cases corresponding to unknown true values, ``pygmo`` optimizers
+with certain (increasing, decreasing, probability and linear) constraints,
+and algorithms ``nlopt_auglag`` & ``nlopt_auglag_eq`` have been xfailed.
+For each type of xfail case, a detailed reason has been specified.
