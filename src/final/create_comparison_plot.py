@@ -22,10 +22,10 @@ if __name__ == "__main__":
     doc = Document()
     source, plots, grid = interactive_distribution_plot(
         doc=doc,
-        source=small_data,
+        source=data,
         group_cols=["criterion", "constraints", "parameters"],
         reference_id="true_solution",
         clip=False,
     )
 
-    save(grid, "comparison_plots.html", title="Benchmark Plot")
+    save(grid, ppj("OUT_FIGURES", "comparison_plots.html"), title="Benchmark Plot")

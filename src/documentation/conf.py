@@ -45,7 +45,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "Tests for Optimizers in Estimagic"
-copyright = "2019-, Renata Abikeyeva, Madhurima Chandra"
+copyright = "2020-, Renata Abikeyeva, Madhurima Chandra"
 
 # The version info for the project you"re documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

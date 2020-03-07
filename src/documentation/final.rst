@@ -1,11 +1,11 @@
 .. _final:
 
 ************************************
-Visualisation of optimization
+Visualization of optimization
 ************************************
 
 Comparison plots
 =================
 
 .. raw:: html
-   :file: comparison_plots.html
+  :file: ../../bld/out/figures/comparison_plots.html

@@ -116,8 +116,7 @@ if __name__ == "__main__":
             ]
 
             results.append(opt_params)
+    df = pd.concat(results)
+    df.reset_index(inplace=True, drop=True)
 
-            df = pd.concat(results, sort=False)
-            df.reset_index(inplace=True, drop=True)
-
-            df.to_csv(ppj("OUT_ANALYSIS", f"calculated_{alg}.csv"), index=False)
+    df.to_csv(ppj("OUT_ANALYSIS", f"calculated_{alg}.csv"), index=False)

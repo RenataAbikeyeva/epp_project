@@ -10,7 +10,7 @@ def build(ctx):
             ctx.path_to(ctx, "IN_ANALYSIS", "true_df.csv"),
             ctx.path_to(ctx, "OUT_ANALYSIS", "21_calculated_df.csv"),
         ],
-        target=ctx.path_to(ctx, "FINAL", "comparison_plots.html"),
+        target=ctx.path_to(ctx, "OUT_FIGURES", "comparison_plots.html"),
     )
 
     from src.final.project_dependency_graph import make_project_dependency_graph
