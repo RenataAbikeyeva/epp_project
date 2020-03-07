@@ -257,8 +257,56 @@ For each criterion, we consider the case of 3 dimensions (set D=3). Below you ca
 
 
 4. **Rosenbrock Function**
+    :math:`\Sigma^{D-1}_{i=1}(100(x_i+1 - x_i^2)^2 + (x_i - 1)^2)`
+
+    :math:`D=3 \rightarrow f({x}) = 100(x_2 - x_1^2) + (x_1 - 1)^2`
+
+   Global minimum: :math:`x* = (1, 1, 1)`
+
+    1. No constraints case: ``[]``
+
+        :math:`x* = (1, 1, 1)`
+
+    2. Fixed constraint: ``[{"loc": "x_1", "type": "fixed", "value": 1}]``
+
+        :math:`x_{1} = 1 \rightarrow x* = (1, 1, 1)`
+
+    3. Probability constraint: ``[{"loc": ["x_1", "x_2"], "type": "probability"}]``
+
+        No solution available.
+
+    4. Increasing constraint: ``[{"loc": ["x_2", "x_3"], "type": "increasing"}]``
+
+        Not binding :math:`\rightarrow x* = (1, 1, 1)`
 
 
+    5. Decreasing constraint: ``[{"loc": ["x_1", "x_2"], "type": "decreasing"}]``
+
+        Not binding :math:`\rightarrow x* = (1, 1, 1)`
+
+
+    6. Equality constraint: ``[{"loc": ["x_1", "x_2", "x_3"], "type": "equality"}]``
+
+        Not binding :math:`\rightarrow x* = (1, 1, 1)`
+
+
+    7. Pairwise equality constraint: ``[{"locs": ["x_1", "x_2"], "type": "pairwise_equality"}]``
+
+        Not binding :math:`\rightarrow x* = (1, 1, 1)`
+
+
+    8. Covariance constraint: ``[{"loc": ["x_1", "x_2", "x_3"], "type": "covariance"}]``
+
+        Not binding :math:`\rightarrow x* = (1, 1, 1)`
+
+
+    9. Sdcorr constraint: ``[{"loc": ["x_1", "x_2", "x_3"], "type": "sdcorr"}]``
+
+        Not binding :math:`\rightarrow x* = (1, 1, 1)`
+
+    10. Linear constraint:``[{"loc": ["x_1", "x_2"], "type": "linear", "weights": [1, 2], "value": 4}]``
+
+        No solution available.
 
 Data frame with precision levels
 =======================================

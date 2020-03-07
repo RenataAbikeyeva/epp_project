@@ -48,31 +48,13 @@ def build(ctx):
         features="run_py_script",
         source="concat_results.py",
         deps=[
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_de1220.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_sade.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_pso.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_pso_gen.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_bee_colony.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_cmaes.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_xnes.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_ihs.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_sea.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_pygmo_de.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_scipy_SLSQP.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_scipy_TNC.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_scipy_L-BFGS-B.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_auglag_eq.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_auglag.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_newuoa.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_newuoa_bound.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_neldermead.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_sbplx.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_cobyla.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "calculated_nlopt_bobyqa.csv"),
+            ctx.path_to(ctx, "OUT_ANALYSIS", f"calculated_{alg}.csv")
+            for alg in algorithms
         ],
         target=[ctx.path_to(ctx, "OUT_ANALYSIS", "21_calculated_df.csv")],
     )
     abspath = os.path.join(ctx.path.abspath(), "test_run_optimizer_benchmarks.py")
+
     ctx(
         features="run_py_script",
         source="test_run_optimizer_benchmarks.py",

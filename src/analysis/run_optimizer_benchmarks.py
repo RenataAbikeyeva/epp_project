@@ -42,11 +42,11 @@ def algo_options(alg):
     origin, algo_name = alg.split("_", 1)
     if origin == "pygmo":
         if algo_name in ["ihs"]:
-            algo_options = {"popsize": 1, "gen": 1000}
+            algo_options = {"popsize": 1, "gen": 1000, "seed": 123}
         elif algo_name in ["sea"]:
-            algo_options = {"popsize": 5, "gen": 7000}
+            algo_options = {"popsize": 5, "gen": 7000, "seed": 1234}
         else:
-            algo_options = {"popsize": 30, "gen": 150}
+            algo_options = {"popsize": 30, "gen": 150, "seed": 12345}
     else:
         algo_options = {}
 
