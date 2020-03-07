@@ -119,126 +119,126 @@ rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [
 rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_de1220,2
 rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_de1220,2
 rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_de1220,2
-sum_of_squares,[],x_1,pygmo_sade,3
-sum_of_squares,[],x_2,pygmo_sade,3
-sum_of_squares,[],x_3,pygmo_sade,3
-trid,[],x_1,pygmo_sade,3
-trid,[],x_2,pygmo_sade,3
-trid,[],x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,[],x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,[],x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,[],x_3,pygmo_sade,3
-rosenbrock,[],x_1,pygmo_sade,3
-rosenbrock,[],x_2,pygmo_sade,3
-rosenbrock,[],x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,3
-trid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,3
-trid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,3
-trid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,3
-trid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,3
-trid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,3
-trid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,3
-trid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,3
-trid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,3
-trid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,3
-rosenbrock,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,3
-rosenbrock,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,3
-rosenbrock,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,3
-sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,3
-trid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,3
-rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,3
-rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,3
+sum_of_squares,[],x_1,pygmo_sade,2
+sum_of_squares,[],x_2,pygmo_sade,2
+sum_of_squares,[],x_3,pygmo_sade,2
+trid,[],x_1,pygmo_sade,2
+trid,[],x_2,pygmo_sade,2
+trid,[],x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,[],x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,[],x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,[],x_3,pygmo_sade,2
+rosenbrock,[],x_1,pygmo_sade,2
+rosenbrock,[],x_2,pygmo_sade,2
+rosenbrock,[],x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,2
+trid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,2
+trid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,2
+trid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': 'x_1', 'type': 'fixed', 'value': 1}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'probability'}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,2
+trid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,2
+trid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,2
+trid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_2', 'x_3'], 'type': 'increasing'}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'decreasing'}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'equality'}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,2
+trid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,2
+trid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,2
+trid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,2
+rosenbrock,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_1,pygmo_sade,2
+rosenbrock,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_2,pygmo_sade,2
+rosenbrock,"[{'locs': ['x_1', 'x_2'], 'type': 'pairwise_equality'}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'sdcorr'}]",x_3,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,2
+sum_of_squares,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,2
+trid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,2
+rotated_hyper_ellipsoid,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_1,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_2,pygmo_sade,2
+rosenbrock,"[{'loc': ['x_1', 'x_2'], 'type': 'linear', 'weights': [1, 2], 'value': 4}]",x_3,pygmo_sade,2
 sum_of_squares,[],x_1,pygmo_pso,2
 sum_of_squares,[],x_2,pygmo_pso,2
 sum_of_squares,[],x_3,pygmo_pso,2
