@@ -260,6 +260,11 @@ for case in test_cases:
             & (constraint == "[{'loc': ['x_1', 'x_2', 'x_3'], 'type': 'covariance'}]")
             & (parameter == "x_1")
         )
+        or (
+            (criterion == "trid")
+            & (constraint == "[]")
+            & ((parameter == "x_1") or (parameter == "x_2"))
+        )
     ):
         test_cases[test_cases.index(case)] = pytest.param(
             algorithm,
