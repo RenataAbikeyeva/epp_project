@@ -15,4 +15,4 @@ Welcome to the Tests for Optimizers in Estimagic project's documentation!
     final
     model_code
     model_specs
-    references
+

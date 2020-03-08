@@ -312,7 +312,7 @@ For each criterion function, we consider the case of 3 dimensions (set D=3). Bel
 Dataframe with Precision Levels
 =======================================
 
-The Dataframe precisions.csv lists the precision level corresponding to each algorithm.
+The Dataframe precision_levels_df.csv lists the precision level corresponding to each algorithm.
 The precision has been set to the maximum level at which the algorithm in question
 passes all test cases. The minimum level is set to 2.
 

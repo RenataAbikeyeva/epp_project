@@ -12,7 +12,7 @@ if __name__ == "__main__":
     # concat the true and calculated data
     data_true = pd.read_csv(ppj("IN_ANALYSIS", "true_df.csv"))
     data_true["algorithm"] = "true_solution"
-    data_calc = pd.read_csv(ppj("OUT_ANALYSIS", "21_calculated_df.csv"))
+    data_calc = pd.read_csv(ppj("OUT_ANALYSIS", "df_calculated.csv"))
     data = pd.concat([data_true, data_calc], sort=True)
     data.rename(columns={"algorithm": "id"}, inplace=True)
 

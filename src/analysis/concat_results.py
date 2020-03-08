@@ -17,4 +17,4 @@ for alg_calculated_path in all_calculated_paths:
 esti_df = pd.concat(esti_list, sort=False)
 esti_df.reset_index(inplace=True, drop=True)
 
-esti_df.to_csv(ppj("OUT_ANALYSIS", "21_calculated_df.csv"), index=False)
+esti_df.to_csv(ppj("OUT_ANALYSIS", "df_calculated.csv"), index=False)

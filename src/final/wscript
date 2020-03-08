@@ -8,7 +8,7 @@ def build(ctx):
         source="create_comparison_plot.py",
         deps=[
             ctx.path_to(ctx, "IN_ANALYSIS", "true_df.csv"),
-            ctx.path_to(ctx, "OUT_ANALYSIS", "21_calculated_df.csv"),
+            ctx.path_to(ctx, "OUT_ANALYSIS", "df_calculated.csv"),
         ],
         target=ctx.path_to(ctx, "OUT_FIGURES", "comparison_plots.html"),
     )

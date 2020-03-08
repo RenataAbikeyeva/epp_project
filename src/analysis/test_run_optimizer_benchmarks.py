@@ -15,8 +15,8 @@ from numpy.testing import assert_almost_equal as aae
 from bld.project_paths import project_paths_join as ppj
 
 true_df = pd.read_csv(ppj("IN_ANALYSIS", "true_df.csv"))
-esti_df = pd.read_csv(ppj("OUT_ANALYSIS", "21_calculated_df.csv"))
-preci_df = pd.read_csv(ppj("IN_ANALYSIS", "precisions_21_df.csv"))
+esti_df = pd.read_csv(ppj("OUT_ANALYSIS", "df_calculated.csv"))
+preci_df = pd.read_csv(ppj("IN_ANALYSIS", "precision_levels_df.csv"))
 
 
 with open(ppj("IN_MODEL_SPECS", "constr_without_bounds_test.json"), "r") as read_file:
