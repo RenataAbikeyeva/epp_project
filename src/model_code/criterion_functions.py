@@ -69,7 +69,6 @@ def rosenbrock(params):
         integer:  Rosenbrock function output.
 
     """
-    #    params_np = params["value"].to_numpy()
     r1 = ((params["value"][1:] - params["value"][:-1].values ** 2) ** 2).sum() * 100
     r2 = ((params["value"][:-1] - 1) ** 2).sum()
     return r1 + r2
