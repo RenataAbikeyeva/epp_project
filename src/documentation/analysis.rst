@@ -1,7 +1,7 @@
 .. _analysis:
 
 ****************************************************************
-Optimization on Benchmark Functions. Tests for Algorithms.
+Optimizing Benchmark Functions. Tests for Algorithms
 ****************************************************************
 
 Documentation of the code in *src.analysis*. This is the core of the project.
@@ -257,6 +257,7 @@ For each criterion function, we consider the case of 3 dimensions (set D=3). Bel
 
 
 4. **Rosenbrock Function**
+
     :math:`\Sigma^{D-1}_{i=1}(100(x_i+1 - x_i^2)^2 + (x_i - 1)^2)`
 
     :math:`D=3 \rightarrow f({x}) = 100(x_2 - x_1^2) + (x_1 - 1)^2`
@@ -317,8 +318,8 @@ passes all test cases. The minimum level is set to 2.
 
 
 
-Tests for Algorithms
-========================
+Tests for Algorithms (test_run_optimizer_benchmarks.py)
+===================================================================
 
 
 .. automodule:: src.analysis.test_run_optimizer_benchmarks
@@ -326,9 +327,11 @@ Tests for Algorithms
 
 Each algorithm is tested for 4 criterion functions and 10 constraints.
 We set the number of dimensions for each criterion as 3, hence each
-algorithm faces a total of 120 test cases. Certain algorithms fail some test
-cases even at precision = 2, those cases have been xfailed. Further,
-cases corresponding to unknown true values, ``pygmo`` optimizers
-with certain (increasing, decreasing, probability and linear) constraints,
-and algorithms ``nlopt_auglag`` & ``nlopt_auglag_eq`` have been xfailed.
-For each type of xfail case, a detailed reason has been specified.
+algorithm faces a total of 120 test cases.
+
+Test cases corresponding to the following have been xfailed:
+
+* Unknown true values
+* ``pygmo`` optimizers with certain constraints
+* Algorithms ``nlopt_auglag`` and ``nlopt_auglag_eq``
+* Test cases wherein certain algorithms fail even at precision = 2

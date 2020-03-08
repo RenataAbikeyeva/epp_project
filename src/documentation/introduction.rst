@@ -5,14 +5,13 @@
 Introduction
 ************
 This project implements tests for a subset of the optimizers supported by the Python package Estimagic. Estimagic provides
- .....(interface?) for optimization, and additionally allows setting different types of constraints to the optimization
- problem.
-We implement 4 benchmark functions, compute
-their optimized parameters for the case of no constraint and nine types of constrained cases. Having also
+.....(interface?) for optimization, and additionally allows setting different types of constraints to the optimization
+problem. We implement four benchmark functions, and compute
+their optimized parameters for ten types of constraints (including unconstrained). Having also
 computed the true
-values of said optimized parameters by hand, we proceed to write tests comparing the self-computed (true_value) values
+values of said optimized parameters by hand, we write tests comparing the self-computed (true_value) values
 with the values provided by the optimizers (calculated_value).
-In building this project, we utilize the very helpful project template provided by Professor Hans Martin
+In building this project, we utilize the very helpful project template provided by Professor Hans-Martin
 von Gaudecker. You can find the documentation on the rationale, Waf, and
 more background at https://econ-project-templates.readthedocs.io/en/stable/
 
@@ -32,7 +31,7 @@ The logic of the project template works by step of the analysis:
 3. Visualisation and results formatting (e.g. exporting of LaTeX tables)
 4. Research paper and presentations.
 
-It can be useful to have code and model parameters available to more than one of these steps, in that case see sections :ref:`model_specifications`, :ref:`model_code`, and :ref:`library`.
+It can be useful to have code and model parameters available to more than one of these steps, in that case see sections.
 
 First of all, think about whether this structure fits your needs -- if it does not, you need to adjust (delete/add/rename) directories and files in the following locations:
 
